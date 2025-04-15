@@ -57,14 +57,14 @@ if uploaded_file is not None:
     #st.write(stringio)
 
     # To read file as string:
-    string_data = stringio.read()
+    #string_data = stringio.read()
     #st.write(string_data)
 
     # Can be used wherever a "file-like" object is accepted:
-    #dataframe = pd.read_csv(uploaded_file)
+    dataframe = pd.read_csv(uploaded_file)
     #st.write(dataframe)
 
-    file_input = string_data
+    file_input = dataframe
 
     if len(file_input.split(" ")) > 20000:
         st.write("Please enter a shorter file. The maximum length is 20000 words.")
